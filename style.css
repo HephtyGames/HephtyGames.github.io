@@ -18,6 +18,21 @@ body {
     color: white !important;
 }
 
+/* Dropdown menu */
+.nav-item .dropdown-menu {
+    background-color: #333333; /* Same dark gray as navbar */
+    border: none; /* Remove border for seamless look */
+}
+
+.dropdown-item {
+    color: orange !important; /* Same orange as navbar text */
+}
+
+.dropdown-item:hover {
+    background-color: #444444; /* Slightly lighter gray for hover */
+    color: white !important; /* White text on hover */
+}
+
 /* Spark effect */
 .spark {
     position: absolute;
