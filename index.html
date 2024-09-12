@@ -11,7 +11,7 @@
     <style>
         body {
             background-color: black;
-            overflow: hidden; /* Hide overflow sparks */
+            overflow: hidden;
         }
 
         .navbar, .navbar-brand, .nav-link {
@@ -79,34 +79,30 @@
         $(document).ready(function() {
             // Function to create a new spark
             function createSpark() {
-                // Create new div element
                 var spark = $('<div>').addClass('spark');
-
-                // Random horizontal position
                 var x = Math.random() * $(window).width();
-
-                // Position spark at bottom of screen at random x
                 spark.css({
                     left: x + 'px'
                 });
-
-                // Add to body
                 $('body').append(spark);
-
-                // Animate spark flying up and slightly to the side
                 spark.animate({
-                    bottom: $(window).height(), // animate to top of the screen
-                    left: (x + Math.random() * 100 - 50) + 'px' // add some variability in the horizontal direction
+                    bottom: $(window).height(),
+                    left: (x + Math.random() * 100 - 50) + 'px'
                 }, {
-                    duration: Math.random() * 2000 + 1000, // duration between 1 to 3 seconds
+                    duration: Math.random() * 2000 + 1000,
                     complete: function() {
-                        spark.remove(); // remove spark after animation
+                        spark.remove();
                     }
                 });
             }
 
             // Create a new spark every 100ms
-            setInterval(createSpark, 100);
+            var fireInterval = setInterval(createSpark, 100);
+
+            // Stop the fire effect after 10 seconds
+            setTimeout(function() {
+                clearInterval(fireInterval);
+            }, 10000); // 10 seconds in milliseconds
         });
     </script>
 
