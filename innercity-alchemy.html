@@ -11,52 +11,126 @@
         body {
             background-color: black;
             color: white;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Horizontal centering */
+            align-items: center; /* Vertical centering */
+            margin: 20px 0;
+        }
+
+        .project-logo {
+            max-width: 450px; /* Shrinking the logo slightly */
+        }
+
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow images to wrap to new lines */
+            gap: 30px; /* Increase the space between images */
+            margin: 20px 0;
+        }
+
+        .screenshots img {
+            max-width: 550px; /* Increase the size of the images */
+            height: auto;
+            border: 2px solid white;
+        }
+
+        .description-text {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+            color: orange;
+        }
+
+        h1, h2 {
+            color: orange;
         }
     </style>
 </head>
 
 <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-md">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">HephtyGames</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Projects
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="projectsDropdown">
-                                <a class="dropdown-item" href="innercity-alchemy.html">InnerCity Alchemy</a>
-                                <a class="dropdown-item" href="lefthook.html">LeftHook</a>
-                                <a class="dropdown-item" href="dungeon-company.html">Dungeon Company</a>
-                                <a class="dropdown-item" href="rynth.html">Rynth</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="aboutme.html">About Me</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HephtyGames</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                            <a class="dropdown-item" href="innercity-alchemy.html">InnerCity Alchemy</a>
+                            <a class="dropdown-item" href="lefthook.html">LeftHook</a>
+                            <a class="dropdown-item" href="dungeon-company.html">Dungeon Company</a>
+                            <a class="dropdown-item" href="rynth.html">Rynth</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About Me</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-    <div class="container">
-        <h1>InnerCity Alchemy</h1>
-        <p>This is the project page for InnerCity Alchemy.</p>
-        <!-- Add your content here -->
+    <!-- Logo Container with Flexbox -->
+    <div class="logo-container">
+        <img class="project-logo" src="ICALogo.png" alt="InnerCity Alchemy Logo">
+    </div>
+
+    <!-- Screenshots -->
+    <div class="screenshots">
+        <img src="ICASC1.png" alt="Screenshot 1">
+        <img src="ICASC2.png" alt="Screenshot 2">
+        <img src="ICASC3.png" alt="Screenshot 3">
+        <img src="ICASC4.png" alt="Screenshot 4">
+        <img src="ICASC5.jpg" alt="Screenshot 5">
+        <img src="ICASC6.jpg" alt="Screenshot 6">
+    </div>
+
+    <!-- Description -->
+    <div class="description-text">
+        <h2>Abstract</h2>
+        <p>
+            There exist many potion and magic-related games, yet you won't find one that takes place in modern-day America.
+            InnerCity Alchemy plans on bringing the wonder of a seemingly endless variety of potions to the setting of the modern human world.
+        </p>
+
+        <h2>Description</h2>
+        <p>
+            InnerCity Alchemy puts the player in the role of Peter Brewer, a man who has inherited a modern-day potion shop from his recently deceased grandfather.
+            His wife is ill, and the hospital bills are stacking. Peter reluctantly takes ownership of the shop and now has to manage a business in order to help save her.
+        </p>
+        <p>
+            The player's goal will be to keep their shop afloat and earn enough money to pay off the hospital bills or find all the ingredients to craft the ultimate healing potion.
+            The ingredients for the ultimate healing potion are scattered throughout the city on ripped-out pages from the store’s alchemy book.
+        </p>
+        <p>
+            This will all be done while experimenting, adventuring, solving puzzles, and facing life-threatening enemies. Throughout their adventure, the players will meet all sorts
+            of interesting and wacky characters with their own goals and ambitions. The players will get to choose whether they help them or make a new enemy. There will be plenty
+            of mysteries to uncover and even more potions to discover.
+        </p>
+        <p>
+            <strong>Note: The game is still a work in progress.</strong>
+        </p>
     </div>
 
     <!-- jQuery Full Version -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
+
      <!-- Custom JS -->
      <script>
         $(document).ready(function() {
