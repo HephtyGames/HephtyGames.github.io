@@ -1,0 +1,28 @@
+/* General Styles */
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333333; /* Dark gray background */
+    color: orange !important;
+}
+
+.navbar-brand, .nav-link {
+    color: orange !important;
+}
+
+.navbar .nav-link:hover {
+    color: white !important;
+}
+
+/* Spark effect */
+.spark {
+    position: absolute;
+    background-color: orange;
+    width: 2px;
+    height: 2px;
+    bottom: 0;
+}
