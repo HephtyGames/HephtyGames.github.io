@@ -16,29 +16,28 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md">
         <div class="container">
-            <a class="navbar-brand" href="#">HephtyGames</a>
+            <a class="navbar-brand" href="index.html">HephtyGames</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <!-- Projects dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Projects
                         </a>
                         <div class="dropdown-menu" aria-labelledby="projectsDropdown">
-                            <a class="dropdown-item" href="#innercity-alchemy.html">InnerCity Alchemy</a>
-                            <a class="dropdown-item" href="#lefthook.html">LeftHook</a>
-                            <a class="dropdown-item" href="#dungeon-company.html">Dungeon Company</a>
-                            <a class="dropdown-item" href="#rynth.html">Rynth</a> <!-- Added Rynth -->
+                            <a class="dropdown-item" href="innercity-alchemy.html">InnerCity Alchemy</a>
+                            <a class="dropdown-item" href="lefthook.html">LeftHook</a>
+                            <a class="dropdown-item" href="dungeon-company.html">Dungeon Company</a>
+                            <a class="dropdown-item" href="rynth.html">Rynth</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#aboutme.html">About Me</a>
+                        <a class="nav-link" href="aboutme.html">About Me</a>
                     </li>
                 </ul>
             </div>
@@ -65,7 +64,6 @@
     <!-- Custom JS -->
     <script>
         $(document).ready(function() {
-            // Function to create a new spark
             function createSpark() {
                 var spark = $('<div>').addClass('spark');
                 var x = Math.random() * $(window).width();
@@ -83,14 +81,10 @@
                     }
                 });
             }
-
-            // Create a new spark every 100ms
             var fireInterval = setInterval(createSpark, 100);
-
-            // Stop the fire effect after 10 seconds
             setTimeout(function() {
                 clearInterval(fireInterval);
-            }, 10000); // 10 seconds in milliseconds
+            }, 10000);
         });
     </script>
 

@@ -1,7 +1,11 @@
 /* General Styles */
 body {
     background-color: black;
-    overflow: hidden;
+    color: white; /* Ensure all text is white by default */
+}
+
+.about-section {
+    color: orange; /* Keep the orange color for the About Me section */
 }
 
 /* Navbar Styles */
