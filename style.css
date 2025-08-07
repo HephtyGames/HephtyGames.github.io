@@ -17,21 +17,31 @@
 }
 
 /* =========  Base typography  ========= */
-html { font-size: 100%; }         /* 1 rem = 16 px */
+html, body{
+    height: 100%;                /* so flexbox can measure full viewport */
+    margin: 0;
+}
+
 body{
+    display: flex;               /* enables sticky-footer pattern */
+    flex-direction: column;
+    min-height: 100vh;           /* fallback for older browsers */
+    
     background: var(--color-bg);
     color: var(--color-text);
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
     line-height: 1.5;
-    margin: 0;
-    padding-top: 70px;            /* room for fixed navbar */
+    padding-top: 70px;           /* room for fixed navbar */
 }
+
+main{ flex: 1 0 auto; }          /* any main-content wrapper (hero, etc.) */
+
 h1,h2,h3,h4,h5,h6{ color: var(--color-heading); margin-top:0; }
-h1 { font-size: 2.25rem; font-weight: 700; }
-h2 { font-size: 1.75rem; font-weight: 600; }
-h3 { font-size: 1.35rem; font-weight: 600; }
-h4,h5,h6{ font-weight:600; }
+h1{ font-size:2.25rem;font-weight:700;}
+h2{ font-size:1.75rem;font-weight:600;}
+h3{ font-size:1.35rem;font-weight:600;}
+h4,h5,h6{font-weight:600;}
 
 /* =========  Navigation  ========= */
 .navbar{
@@ -118,3 +128,29 @@ a:hover{ color:var(--color-accent-hover); text-decoration:none; }
 
 /* About-page accent headings */
 .about-section{ color:var(--color-accent); }
+
+/* =========  Footer ========= */
+footer{
+    background: var(--color-surface);
+    color: var(--color-text);
+    padding: 40px 0 20px;
+    border-top: 1px solid var(--color-surface-hover);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+footer a{ color: var(--color-accent); }
+footer a:hover{ color: var(--color-accent-hover); text-decoration:none; }
+
+.footer-links{ list-style:none; padding:0; margin:0; }
+.footer-links li{ display:inline-block; margin-right:1rem; }
+
+.footer-social a{ margin-right:0.75rem; font-size:1.4rem; }
+
+@media (max-width:575.98px){
+    footer .row{ text-align:center; }
+    .footer-links li{ display:block; margin:0.3rem 0; }
+    .footer-social{ justify-content:center; }
+    h1{ font-size:1.8rem; }  h2{ font-size:1.4rem; }
+    .hero-carousel img{ max-height:250px; }
+}
