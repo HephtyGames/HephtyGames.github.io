@@ -4,13 +4,14 @@
     <title>HephtyGames</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- ===== Navigation ===== -->
-<nav class="navbar navbar-expand-md">
+<nav class="navbar navbar-expand-md fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">HephtyGames</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -20,10 +21,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown"
+                       role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Projects</a>
                     <div class="dropdown-menu" aria-labelledby="projectsDropdown">
                         <a class="dropdown-item" href="innercity-alchemy.html">InnerCity Alchemy</a>
                         <a class="dropdown-item" href="lefthook.html">LeftHook</a>
@@ -36,24 +40,39 @@
     </div>
 </nav>
 
-<!-- ===== Banner ===== -->
-<section id="vertical-banner" class="soft-shadow"
-        style="text-align:center;padding:50px;background:var(--color-surface);
-               border-radius:15px;width:90%;margin:50px auto;">
-    <a href="lefthook.html">
-        <img src="LeftHooklogo.png" alt="LeftHook Game" class="soft-shadow"
-             style="width:300px;margin:40px 20px;border:3px solid var(--color-accent);border-radius:10px;">
+<!-- ===== Hero carousel (unchanged) ===== -->
+<div id="heroCarousel" class="carousel slide hero-carousel soft-shadow"
+     data-ride="carousel" data-interval="6500">
+    <ol class="carousel-indicators">
+        <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#heroCarousel" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="lefthook.html"><img src="LeftHooklogo.png"
+                 class="d-block w-100 img-fluid" alt="LeftHook Game"></a>
+        </div>
+        <div class="carousel-item">
+            <a href="innercity-alchemy.html"><img src="ICALogo.png"
+                 class="d-block w-100 img-fluid" alt="InnerCity Alchemy Game"></a>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
     </a>
-    <a href="innercity-alchemy.html">
-        <img src="ICALogo.png" alt="InnerCity Alchemy Game" class="soft-shadow"
-             style="width:450px;margin:40px 20px;border:3px solid var(--color-accent);border-radius:10px;">
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
     </a>
-</section>
+</div>
 
 <!-- ===== Scripts ===== -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
+/* Spark effect */
 $(function(){
     function createSpark(){
         const spark=$('<div>').addClass('spark'),

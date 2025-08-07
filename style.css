@@ -1,87 +1,120 @@
-/* ------------- Fonts ------------- */
+/* =========  Google Font  ========= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* ------------- Colour palette ------------- */
+/* =========  Colour palette  ========= */
 :root {
-    --color-bg: #121212;            /* charcoal */
-    --color-text: #E6E6E6;          /* light grey */
-    --color-heading: #FFFFFF;       /* white */
+    --color-bg:            #121212;
+    --color-text:          #E6E6E6;
+    --color-heading:       #FFFFFF;
 
-    --color-accent: #FF8C42;        /* muted orange */
-    --color-accent-hover: #FFA35C;  /* lighter orange */
+    --color-accent:        #FF8C42;   /* muted orange */
+    --color-accent-hover:  #FFA35C;   /* lighter orange */
 
-    --color-surface: #242424;
+    --color-surface:       #242424;
     --color-surface-hover: #333333;
 
-    /* Elements that must stay bright-orange */
-    --color-legacy-orange: #E69500; /* sparks & word-mark */
+    --color-legacy-orange: #E69500;   /* sparks & word-mark */
 }
 
-/* ------------- Global ------------- */
-html { font-size: 100%; }                 /* 1 rem = 16 px */
-body {
+/* =========  Base typography  ========= */
+html { font-size: 100%; }         /* 1 rem = 16 px */
+body{
     background: var(--color-bg);
     color: var(--color-text);
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
     line-height: 1.5;
     margin: 0;
+    padding-top: 70px;            /* room for fixed navbar */
 }
-h1, h2, h3, h4, h5, h6 {
-    color: var(--color-heading);
-    margin-top: 0;
-}
-/* Type scale & weights */
-h1 { font-size: 2.25rem; font-weight: 700; }   /* ≈36 px */
-h2 { font-size: 1.75rem; font-weight: 600; }   /* ≈28 px */
-h3 { font-size: 1.35rem; font-weight: 600; }   /* ≈22 px */
-h4, h5, h6 { font-weight: 600; }
+h1,h2,h3,h4,h5,h6{ color: var(--color-heading); margin-top:0; }
+h1 { font-size: 2.25rem; font-weight: 700; }
+h2 { font-size: 1.75rem; font-weight: 600; }
+h3 { font-size: 1.35rem; font-weight: 600; }
+h4,h5,h6{ font-weight:600; }
 
-/* ------------- Navigation ------------- */
-.navbar, header { background: var(--color-surface); }
-.navbar-brand {
+/* =========  Navigation  ========= */
+.navbar{
+    background: var(--color-surface);
+    box-shadow: 0 2px 6px rgba(0,0,0,.4);
+    z-index: 1030;
+}
+.navbar-brand{
     color: var(--color-legacy-orange) !important;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
-.nav-link         { color: var(--color-accent) !important; font-weight: 600; }
-.nav-link:hover   { color: var(--color-accent-hover) !important; }
+.nav-link{ color: var(--color-accent) !important; font-weight: 600; }
+.nav-link:hover{ color: var(--color-accent-hover) !important; }
+.nav-link.active{
+    color: var(--color-accent-hover) !important;
+    border-bottom: 2px solid var(--color-accent-hover);
+}
 
-.nav-item .dropdown-menu                 { background: var(--color-surface); }
-.nav-item .dropdown-menu .dropdown-item  { color: var(--color-text); }
-.nav-item .dropdown-menu .dropdown-item:hover {
+.nav-item .dropdown-menu{ background: var(--color-surface); }
+.nav-item .dropdown-menu .dropdown-item{ color: var(--color-text); }
+.nav-item .dropdown-menu .dropdown-item:hover{
     background: var(--color-surface-hover);
 }
 
-/* ------------- Buttons / CTAs ------------- */
+/* ===== Hamburger icon on dark bg ===== */
+.navbar-toggler{
+    border: 1px solid var(--color-accent);
+}
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FF8C42' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* =========  Buttons / CTAs  ========= */
 .btn{
     background: var(--color-accent);
     color: var(--color-heading);
-    border: none;
-    font-weight: 600;
-    box-shadow: 0 0 6px rgba(255,140,66,.30);
-    transition: background .2s, box-shadow .2s;
+    border:none;
+    font-weight:600;
+    box-shadow:0 0 6px rgba(255,140,66,.3);
+    transition:background .2s,box-shadow .2s;
 }
 .btn:hover{
-    background: var(--color-accent-hover);
-    box-shadow: 0 0 10px rgba(255,163,92,.50);
+    background:var(--color-accent-hover);
+    box-shadow:0 0 10px rgba(255,163,92,.5);
 }
 
-/* ------------- Links ------------- */
-a       { color: var(--color-accent); font-weight: 600; }
-a:hover { color: var(--color-accent-hover); text-decoration: none; }
+/* =========  Links  ========= */
+a{ color:var(--color-accent); font-weight:600; }
+a:hover{ color:var(--color-accent-hover); text-decoration:none; }
 
-/* ------------- Spark effect (keeps original colour) ------------- */
+/* =========  Spark effect  ========= */
 .spark{
-    position: absolute;
-    width: 2px; height: 2px;
-    background: var(--color-legacy-orange);
-    bottom: 0;
-    pointer-events: none;
+    position:absolute;
+    width:2px;height:2px;
+    background:var(--color-legacy-orange);
+    bottom:0;
+    pointer-events:none;
 }
 
-/* ------------- Utilities ------------- */
-.soft-shadow{ box-shadow: 0 0 10px rgba(255,140,66,.40); }
+/* =========  Utilities  ========= */
+.soft-shadow{ box-shadow:0 0 10px rgba(255,140,66,.4); }
 
-/* ------------- Section-specific tweaks ------------- */
-.about-section{ color: var(--color-accent); }
+/* ---- Responsive helpers (unchanged) ---- */
+.img-fluid{ max-width:100%; height:auto; }
+.flex-gallery{
+    display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center;
+}
+.flex-gallery img{ flex:1 1 calc(33.333% - 1.5rem); max-width:calc(33.333% - 1.5rem); }
+@media (max-width:991.98px){ .flex-gallery img{ flex:1 1 calc(50% - 1.5rem); max-width:calc(50% - 1.5rem);} }
+@media (max-width:575.98px){
+    .flex-gallery img{ flex:1 1 100%; max-width:100%; }
+    h1{ font-size:1.8rem; }  h2{ font-size:1.4rem; }
+    .container, .hero-carousel{ padding-left:1rem; padding-right:1rem; }
+    .hero-carousel img{ max-height:250px; }
+}
+
+/* ---- Hero carousel sizing (unchanged) ---- */
+.hero-carousel{
+    width:90%; margin:50px auto; border-radius:15px;
+    overflow:hidden; background:var(--color-surface);
+}
+.hero-carousel img{ max-height:400px; object-fit:contain; width:100%; }
+
+/* About-page accent headings */
+.about-section{ color:var(--color-accent); }

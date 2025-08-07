@@ -4,22 +4,22 @@
     <title>InnerCity Alchemy</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        body{background:var(--color-bg);color:var(--color-text);text-align:center;}
-        .logo-container{display:flex;justify-content:center;align-items:center;margin:20px 0;}
-        .project-logo{max-width:450px;}
-        .screenshots{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;margin:20px 0;}
-        .screenshots img{max-width:550px;height:auto;border:2px solid white;}
-        .description-text{max-width:900px;margin:0 auto;text-align:left;color:var(--color-text);}
-        h1,h2{color:var(--color-heading);}
+        body{ background:var(--color-bg); color:var(--color-text); text-align:center; }
+        .logo-container{ display:flex; justify-content:center; align-items:center; margin:20px 0; }
+        .project-logo{ max-width:450px; }
+        /* rely on global .flex-gallery for responsiveness */
+        .description-text{ max-width:900px; margin:0 auto; text-align:left; }
+        h1,h2{ color:var(--color-heading); }
     </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md">
+<!-- ===== Navigation ===== -->
+<nav class="navbar navbar-expand-md fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">HephtyGames</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -31,10 +31,11 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                    <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown"
+                       role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Projects</a>
                     <div class="dropdown-menu" aria-labelledby="projectsDropdown">
-                        <a class="dropdown-item" href="innercity-alchemy.html">InnerCity Alchemy</a>
+                        <a class="dropdown-item active" href="innercity-alchemy.html">InnerCity Alchemy</a>
                         <a class="dropdown-item" href="lefthook.html">LeftHook</a>
                         <a class="dropdown-item" href="rynth.html">Rynth</a>
                     </div>
@@ -45,42 +46,56 @@
     </div>
 </nav>
 
-<!-- Logo -->
+<!-- ===== Project logo ===== -->
 <div class="logo-container">
-    <img class="project-logo" src="ICALogo.png" alt="InnerCity Alchemy Logo">
+    <img class="project-logo img-fluid" src="ICALogo.png"
+         alt="InnerCity Alchemy Logo">
 </div>
 
-<!-- Screenshots -->
-<div class="screenshots">
-    <img src="ICASC1.png" alt="Screenshot 1">
-    <img src="ICASC2.png" alt="Screenshot 2">
-    <img src="ICASC3.png" alt="Screenshot 3">
-    <img src="ICASC4.png" alt="Screenshot 4">
-    <img src="ICASC5.jpg" alt="Screenshot 5">
-    <img src="ICASC6.jpg" alt="Screenshot 6">
+<!-- ===== Screenshots ===== -->
+<div class="flex-gallery">
+    <img src="ICASC1.png"  alt="Screenshot 1" class="img-fluid">
+    <img src="ICASC2.png"  alt="Screenshot 2" class="img-fluid">
+    <img src="ICASC3.png"  alt="Screenshot 3" class="img-fluid">
+    <img src="ICASC4.png"  alt="Screenshot 4" class="img-fluid">
+    <img src="ICASC5.jpg"  alt="Screenshot 5" class="img-fluid">
+    <img src="ICASC6.jpg"  alt="Screenshot 6" class="img-fluid">
 </div>
 
-<!-- Description -->
+<!-- ===== Description ===== -->
 <div class="description-text">
     <h2>Abstract</h2>
-    <p>There exist many potion and magic-related games, yet you won't find one that takes place in modern-day America.
-       InnerCity Alchemy plans on bringing the wonder of a seemingly endless variety of potions to the setting of the modern human world.</p>
+    <p>There exist many potion- and magic-related games, yet you won't find one
+       that takes place in modern-day America. InnerCity Alchemy plans on
+       bringing the wonder of a seemingly endless variety of potions to the
+       setting of the modern human world.</p>
 
     <h2>Description</h2>
-    <p>InnerCity Alchemy puts the player in the role of Peter Brewer, a man who has inherited a modern-day potion shop from his recently deceased grandfather.
-       His wife is ill, and the hospital bills are stacking. Peter reluctantly takes ownership of the shop and now has to manage a business in order to help save her.</p>
-    <p>The player's goal will be to keep their shop afloat and earn enough money to pay off the hospital bills or find all the ingredients to craft the ultimate healing potion.
-       The ingredients for the ultimate healing potion are scattered throughout the city on ripped-out pages from the store’s alchemy book.</p>
-    <p>This will all be done while experimenting, adventuring, solving puzzles, and facing life-threatening enemies. Throughout their adventure, the players will meet all sorts
-       of interesting and wacky characters with their own goals and ambitions. The players will get to choose whether they help them or make a new enemy.
-       There will be plenty of mysteries to uncover and even more potions to discover.</p>
+    <p>InnerCity Alchemy puts the player in the role of Peter Brewer, a man who
+       has inherited a modern-day potion shop from his recently deceased
+       grandfather. His wife is ill, and hospital bills are stacking. Peter
+       reluctantly takes ownership of the shop and now has to manage a business
+       in order to help save her.</p>
+    <p>The player’s goal will be to keep their shop afloat and earn enough money
+       to pay off the hospital bills or find all the ingredients to craft the
+       ultimate healing potion. The ingredients for the ultimate healing potion
+       are scattered throughout the city on ripped-out pages from the store’s
+       alchemy book.</p>
+    <p>This will all be done while experimenting, adventuring, solving puzzles
+       and facing life-threatening enemies. Throughout their adventure, the
+       players will meet all sorts of interesting and wacky characters with
+       their own goals and ambitions. The players will get to choose whether
+       they help them or make a new enemy. There will be plenty of mysteries to
+       uncover and even more potions to discover.</p>
     <p><strong>Note: The game is still a work in progress.</strong></p>
 </div>
 
-<!-- Scripts -->
+<!-- ===== Scripts ===== -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
+/* Spark effect */
 $(function(){
     function createSpark(){
         const spark=$('<div>').addClass('spark'),
