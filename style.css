@@ -1,43 +1,67 @@
 :root {
-    /* Palette */
-    --color-bg: #121212;           /* dark charcoal background */
-    --color-text: #E0E0E0;         /* light grey body text */
-    --color-heading: #FFFFFF;      /* white headings */
-    --color-accent: #FF6A3D;       /* muted orange accent */
-    --color-accent-hover: #E05A2D; /* darker variant for hovers */
-    --color-surface: #333333;      /* neutral surface (e.g. navbar) */
-    --color-surface-hover: #444444;/* surface hover state */
+    /* Core palette */
+    --color-bg: #121212;            /* charcoal background */
+    --color-text: #E6E6E6;          /* light-grey body text */
+    --color-heading: #FFFFFF;       /* white headings */
+
+    /* New accent */
+    --color-accent: #FF8C42;        /* muted orange */
+    --color-accent-hover: #FFA35C;  /* lighter hover */
+
+    /* Surfaces */
+    --color-surface: #242424;
+    --color-surface-hover: #333333;
+
+    /* Legacy elements that stay bright-orange */
+    --color-legacy-orange: #E69500; /* sparks & logo word-mark */
 }
 
-/* General Styles */
+/* -------- Global -------- */
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text); /* Ensure all text uses neutral text color */
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+h1,h2,h3,h4,h5,h6 { color: var(--color-heading); }
+
+/* -------- Navbar -------- */
+.navbar,header { background: var(--color-surface); }
+.navbar-brand     { color: var(--color-legacy-orange) !important; }
+.nav-link         { color: var(--color-accent) !important; }
+.nav-link:hover   { color: var(--color-accent-hover) !important; }
+
+.nav-item .dropdown-menu            { background: var(--color-surface); }
+.nav-item .dropdown-menu .dropdown-item         { color: var(--color-text); }
+.nav-item .dropdown-menu .dropdown-item:hover   { background: var(--color-surface-hover); }
+
+/* -------- Buttons / CTAs -------- */
+.btn{
+    background: var(--color-accent);
+    color: var(--color-heading);
+    border:none;
+    box-shadow:0 0 6px rgba(255,140,66,.30);
+    transition:background .2s,box-shadow .2s;
+}
+.btn:hover{
+    background:var(--color-accent-hover);
+    box-shadow:0 0 10px rgba(255,163,92,.50);
 }
 
-.about-section {
-    color: var(--color-accent); /* Accent color for About Me section */
+/* -------- Links -------- */
+a{color:var(--color-accent);}
+a:hover{color:var(--color-accent-hover);}
+
+/* -------- Spark effect (keeps old colour) -------- */
+.spark{
+    position:absolute;
+    width:2px;height:2px;
+    background:var(--color-legacy-orange);
+    bottom:0;
+    pointer-events:none;
 }
 
-/* Navbar Styles */
-.navbar {
-    background-color: var(--color-surface);
-    color: var(--color-accent) !important;
-}
+/* -------- Utilities -------- */
+.soft-shadow{box-shadow:0 0 10px rgba(255,140,66,.40);}
 
-/* Dropdown Hover */
-.dropdown-item:hover {
-    background-color: var(--color-surface-hover);
-    color: var(--color-text) !important;
-}
-
-/* Spark effect */
-.spark {
-    position: absolute;
-    background-color: var(--color-accent);
-    width: 2px;
-    height: 2px;
-    bottom: 0;
-}
-
-/* --- Keep the rest of your existing rules below, replacing any hard-coded colors --- */
+/* About-page headings still accent-coloured */
+.about-section{color:var(--color-accent);}
