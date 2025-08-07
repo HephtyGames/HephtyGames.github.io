@@ -1,63 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Rynth</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        body{background:var(--color-bg);color:var(--color-text);}
-    </style>
+  <title>Rynth – HephtyGames</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .rynth-logo{ max-width:450px; }
+    .rynth-trailer{ width:100%; max-width:800px; aspect-ratio:16/9; }
+    .description-text{ max-width:900px; margin:0 auto; text-align:left; }
+  </style>
 </head>
 <body>
 
-<!-- Navigation (unchanged) -->
+<!-- ===== Navigation (same fixed-top navbar) ===== -->
 <nav class="navbar navbar-expand-md fixed-top">
   <div class="container">
-      <a class="navbar-brand" href="index.html">HephtyGames</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-              data-target="#navbarNav" aria-controls="navbarNav"
-              aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown"
-                     role="button" data-toggle="dropdown" aria-haspopup="true"
-                     aria-expanded="false">Projects</a>
-                  <div class="dropdown-menu" aria-labelledby="projectsDropdown">
-                      <a class="dropdown-item" href="innercity-alchemy.html">InnerCity Alchemy</a>
-                      <a class="dropdown-item" href="lefthook.html">LeftHook</a>
-                      <a class="dropdown-item active" href="rynth.html">Rynth</a>
-                  </div>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
-          </ul>
-      </div>
+    <a class="navbar-brand" href="index.html">HephtyGames</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown"
+             role="button" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">Projects</a>
+          <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <a class="dropdown-item" href="innercity-alchemy.html">InnerCity Alchemy</a>
+            <a class="dropdown-item" href="lefthook.html">LeftHook</a>
+            <a class="dropdown-item active" href="rynth.html">Rynth</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-
-<div class="container">
-    <h1>Rynth</h1>
-    <p>This is the project page for Rynth.</p>
+<!-- ===== Logo ===== -->
+<div class="text-center" style="margin:90px 0 30px;">
+  <img src="Rynth_Logo.png" alt="Rynth Logo" class="rynth-logo img-fluid">
 </div>
 
+<!-- ===== Trailer ===== -->
+<div class="d-flex justify-content-center mb-4">
+  <iframe class="rynth-trailer"
+          src="https://www.youtube.com/embed/24xIcv5O62Q"
+          title="Rynth Trailer" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
+
+<!-- ===== Description ===== -->
+<div class="description-text">
+  <h2>About the Game</h2>
+  <p><strong>Rynth</strong> is an anxiety-inducing experience where you must
+     scour a twisting labyrinth to locate critical medicine and escape a
+     relentless nightmare. This game is <em>not</em> for the faint of heart.</p>
+
+  <h2>Gameplay</h2>
+  <ul>
+    <li>Avoid the monsters lurking in the dark—and whatever you do, <strong>do not get caught</strong>.</li>
+    <li>Three difficulty settings let you dial the tension from eerie to extreme.</li>
+    <li>Atmospheric audio and limited visibility keep you perpetually on edge.</li>
+  </ul>
+
+  <h2>Key Features</h2>
+  <ul>
+    <li>Procedurally arranged hallways for fresh terror every run.</li>
+    <li>Resource-scarce exploration that forces quick, risky decisions.</li>
+    <li>Simple controls—pure psychological challenge.</li>
+  </ul>
+
+  <p class="mt-4"><strong>Status:</strong> Available now on itch.io.</p>
+<a class="btn btn-lg mt-2" href="https://hephtygames.itch.io/rynth" target="_blank">
+  Play on itch.io
+</a>
+
+  
+</div>
+
+<!-- ===== shared footer placeholder + loader ===== -->
+<div id="site-footer"></div>
+<script src="load-footer.js"></script>
+
+<!-- ===== scripts ===== -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<!-- ==== shared footer placeholder + loader ==== -->
-  <div id="site-footer"></div>
-  <script src="load-footer.js"></script>
-
-<!-- Sparks effect-->
 <script>
+/* Spark effect */
 $(function(){
     function createSpark(){
         const spark=$('<div>').addClass('spark'),
@@ -70,7 +109,7 @@ $(function(){
         });
     }
     const fire=setInterval(createSpark,100);
-    setTimeout(()=>clearInterval(fire),10000);
+    setTimeout(()=>clearInterval(fire),5000);
 });
 </script>
 </body>
