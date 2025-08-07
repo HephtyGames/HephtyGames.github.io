@@ -154,3 +154,11 @@ footer a:hover{ color: var(--color-accent-hover); text-decoration:none; }
     h1{ font-size:1.8rem; }  h2{ font-size:1.4rem; }
     .hero-carousel img{ max-height:250px; }
 }
+
+#site-footer{
+    margin-top: auto;     
+    width: 100%;
+}
+main{
+    flex: 1 0 auto;       
+}
